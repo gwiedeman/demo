@@ -1,0 +1,10 @@
+<% if document.online_content? %>
+  <div>
+    <%= blacklight_icon :online, classes: 'blacklight-icons al-online-content-icon' %>
+  </div>
+<% end %>
+<% if document.contains_online_content? %>
+  <div>
+    <%= blacklight_icon :online, classes: 'blacklight-icons al-online-content-icon al-contains-online-content-icon' %>
+  </div>
+<% end %>

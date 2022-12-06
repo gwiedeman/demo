@@ -87,6 +87,7 @@ class CatalogController < ApplicationController
     #  (useful when user clicks "more" on a large facet and wants to navigate alphabetically across a large set of results)
     # :index_range can be an array or range of prefixes that will be used to create the navigation (note: It is case sensitive when searching values)
 
+    config.add_facet_field 'has_online_content_ssim', label: 'Online access', limit: 10
     config.add_facet_field 'collection_sim', label: 'Collection', limit: 10
     config.add_facet_field 'creator_ssim', label: 'Creator', limit: 10
     config.add_facet_field 'creators_ssim', label: 'Creator', show: false
@@ -95,6 +96,8 @@ class CatalogController < ApplicationController
     config.add_facet_field 'names_ssim', label: 'Names', limit: 10
     config.add_facet_field 'repository_sim', label: 'Repository', limit: 10
     config.add_facet_field 'geogname_sim', label: 'Place', limit: 10
+    config.add_facet_field 'mime_type_ssi', label: 'File format', limit: 10
+    config.add_facet_field 'rights_statement_ssi', label: 'Rights', limit: 10
     config.add_facet_field 'places_ssim', label: 'Places', show: false
     config.add_facet_field 'access_subjects_ssim', label: 'Subject', limit: 10
     config.add_facet_field 'component_level_isim', show: false
@@ -122,9 +125,9 @@ class CatalogController < ApplicationController
     config.add_index_field 'collection_ssm', label: 'Collection Title'
     config.add_index_field 'geogname_ssm', label: 'Place'
 
-    config.add_facet_field 'has_online_content_ssim', label: 'Access', query: {
-      online: { label: 'Online access', fq: 'has_online_content_ssim:true' }
-    }
+    #config.add_facet_field 'has_online_content_ssim', label: 'Access', query: {
+    #  online: { label: 'Online access', fq: 'has_online_content_ssim:true' }
+    #}
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -328,6 +331,26 @@ class CatalogController < ApplicationController
     config.add_component_field 'accruals_ssm', label: 'Accruals', helper_method: :render_html_tags
     config.add_component_field 'phystech_ssm', label: 'Physical / technical requirements', helper_method: :render_html_tags
     config.add_component_field 'physloc_ssm', label: 'Physical location', helper_method: :render_html_tags
+
+    # DAO fields
+    config.add_component_field 'rights_statement_ssi', label: 'Rights?', helper_method: :render_html_tags
+    config.add_component_field 'thumbnail_href_ssm', label: 'thumbnail', helper_method: :render_html_tags
+    config.add_component_field 'label_ssi', label: 'DAO label', helper_method: :render_html_tags
+    config.add_component_field 'dao_identifier_ssi', label: 'DAO ID', helper_method: :render_html_tags
+    config.add_component_field 'is_representative_ssm', label: 'is representative?', helper_method: :render_html_tags
+    config.add_component_field 'date_uploaded_ssm', label: 'Date Uploaded', helper_method: :render_html_tags
+    config.add_component_field 'date_modified_ssm', label: 'Date Modified', helper_method: :render_html_tags
+    config.add_component_field 'accession_ssm', label: 'Accession', helper_method: :render_html_tags
+    config.add_component_field 'type_ssm', label: 'Type', helper_method: :render_html_tags
+    config.add_component_field 'content_tesim', label: 'Content', helper_method: :render_html_tags
+    config.add_component_field 'iiif_manifest_ssi', label: 'IIIF', helper_method: :render_html_tags
+
+    config.add_component_field 'hrefs_ssm', label: 'Hrefs', helper_method: :render_html_tags
+    config.add_component_field 'mime_types_ssm', label: 'Mimetypes', helper_method: :render_html_tags
+    config.add_component_field 'filenames_ssm', label: 'Filenames', helper_method: :render_html_tags
+    config.add_component_field 'file_labels_ssm', label: 'labels', helper_method: :render_html_tags
+    config.add_component_field 'file_access_ssm', label: 'access', helper_method: :render_html_tags
+    config.add_component_field 'file_originals_ssm', label: 'originals', helper_method: :render_html_tags
 
     # Component Show Page - Indexed Terms Section
     config.add_component_indexed_terms_field 'access_subjects_ssim', label: 'Subjects', link_to_facet: true, separator_options: {

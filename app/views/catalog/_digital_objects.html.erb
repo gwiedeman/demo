@@ -1,0 +1,17 @@
+<% if document.online_content? %>
+  <% if document._source.key? "iiif_manifest_ssi" %>
+    <div>
+      <iframe style="display:block;margin:auto;" src="https://archives.albany.edu/uv/uv.html#?manifest=<%= document._source["iiif_manifest_ssi"] %>" width="800" height="600" allowfullscreen frameborder="0"></iframe>
+    </div>
+
+  <% else %>
+
+  
+    <% document._source["file_access_ssm"].each_with_index do |access, index| %>
+      <% if access == "true" %>
+        <iframe style="width:100%;" src="<%= document._source["hrefs_ssm"][index] %>" class="embededPDF"></iframe>
+      <% end %>
+    <% end %>
+
+  <% end %>
+<% end %>
