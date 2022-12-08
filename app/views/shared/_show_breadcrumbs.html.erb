@@ -19,7 +19,7 @@
       <% end %> 
     <% end %>
   </ol>
-
+  
   <%= content_tag :h1, class: "breadcrumb-item breadcrumb-item-#{parents.length + 2} media" do %>
     <span class="media-body" aria-hidden="true"><%= blacklight_icon document_or_parent_icon(document) %></span>
     <span class="col"><%= document.normalized_title %><%= render "catalog/online_content_label", document: document %></span>

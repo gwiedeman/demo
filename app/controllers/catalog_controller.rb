@@ -42,7 +42,7 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'normalized_title_ssm'
     config.index.display_type_field = 'level_ssm'
-    # config.index.thumbnail_field = 'thumbnail_path_ss'
+    # config.index.thumbnail_field = 'thumbnail_href_ssm'
 
     # solr field configuration for document/show views
     # config.show.title_field = 'title_display'
@@ -95,6 +95,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'level_sim', label: 'Level', limit: 10
     config.add_facet_field 'names_ssim', label: 'Names', limit: 10
     config.add_facet_field 'repository_sim', label: 'Repository', limit: 10
+    config.add_facet_field 'type_ssm', label: 'Type', limit: 10
     config.add_facet_field 'geogname_sim', label: 'Place', limit: 10
     config.add_facet_field 'mime_type_ssi', label: 'File format', limit: 10
     config.add_facet_field 'rights_statement_ssi', label: 'Rights', limit: 10
@@ -334,23 +335,25 @@ class CatalogController < ApplicationController
 
     # DAO fields
     config.add_component_field 'rights_statement_ssi', label: 'Rights?', helper_method: :render_html_tags
-    config.add_component_field 'thumbnail_href_ssm', label: 'thumbnail', helper_method: :render_html_tags
-    config.add_component_field 'label_ssi', label: 'DAO label', helper_method: :render_html_tags
-    config.add_component_field 'dao_identifier_ssi', label: 'DAO ID', helper_method: :render_html_tags
-    config.add_component_field 'is_representative_ssm', label: 'is representative?', helper_method: :render_html_tags
+    #config.add_component_field 'thumbnail_href_ssm', label: 'thumbnail', helper_method: :render_html_tags
+    #config.add_component_field 'label_ssi', label: 'DAO label', helper_method: :render_html_tags
+    #config.add_component_field 'dao_identifier_ssi', label: 'DAO ID', helper_method: :render_html_tags
+    #config.add_component_field 'is_representative_ssm', label: 'is representative?', helper_method: :render_html_tags
     config.add_component_field 'date_uploaded_ssm', label: 'Date Uploaded', helper_method: :render_html_tags
     config.add_component_field 'date_modified_ssm', label: 'Date Modified', helper_method: :render_html_tags
+    config.add_component_field 'normalized_date_ssm', label: 'Date', helper_method: :render_html_tags
     config.add_component_field 'accession_ssm', label: 'Accession', helper_method: :render_html_tags
     config.add_component_field 'type_ssm', label: 'Type', helper_method: :render_html_tags
-    config.add_component_field 'content_tesim', label: 'Content', helper_method: :render_html_tags
-    config.add_component_field 'iiif_manifest_ssi', label: 'IIIF', helper_method: :render_html_tags
+    config.add_component_field 'creator_ssm', label: 'Creator', helper_method: :render_html_tags
+    #config.add_component_field 'content_tesim', label: 'Content', helper_method: :render_html_tags
+    #config.add_component_field 'iiif_manifest_ssi', label: 'IIIF', helper_method: :render_html_tags
 
-    config.add_component_field 'hrefs_ssm', label: 'Hrefs', helper_method: :render_html_tags
-    config.add_component_field 'mime_types_ssm', label: 'Mimetypes', helper_method: :render_html_tags
-    config.add_component_field 'filenames_ssm', label: 'Filenames', helper_method: :render_html_tags
-    config.add_component_field 'file_labels_ssm', label: 'labels', helper_method: :render_html_tags
-    config.add_component_field 'file_access_ssm', label: 'access', helper_method: :render_html_tags
-    config.add_component_field 'file_originals_ssm', label: 'originals', helper_method: :render_html_tags
+    #config.add_component_field 'hrefs_ssm', label: 'Hrefs', helper_method: :render_html_tags
+    #config.add_component_field 'mime_types_ssm', label: 'Mimetypes', helper_method: :render_html_tags
+    #config.add_component_field 'filenames_ssm', label: 'Filenames', helper_method: :render_html_tags
+    #config.add_component_field 'file_labels_ssm', label: 'labels', helper_method: :render_html_tags
+    #config.add_component_field 'file_access_ssm', label: 'access', helper_method: :render_html_tags
+    #config.add_component_field 'file_originals_ssm', label: 'originals', helper_method: :render_html_tags
 
     # Component Show Page - Indexed Terms Section
     config.add_component_indexed_terms_field 'access_subjects_ssim', label: 'Subjects', link_to_facet: true, separator_options: {

@@ -9,9 +9,31 @@
   
     <% document._source["file_access_ssm"].each_with_index do |access, index| %>
       <% if access == "true" %>
-        <iframe style="width:100%;" src="<%= document._source["hrefs_ssm"][index] %>" class="embededPDF"></iframe>
+        <% if document._source["mime_types_ssm"][index] == "application/pdf" %>
+          <iframe style="width:100%;height: 800px;" src="<%= document._source["hrefs_ssm"][index] %>" class="embededPDF"></iframe>
+        <% elsif document._source["mime_types_ssm"][index].start_with?("audio/") %>
+          <audio controls="controls" class="audiojs" style="width:100%" controlslist="nodownload" preload="auto">
+            <source src="<%= document._source["hrefs_ssm"][index] %>" type="<%= document._source["mime_types_ssm"][index] %>">
+            Your browser does not support the audio tag.
+          </audio>
+        <% elsif document._source["mime_types_ssm"][index].start_with?("video/") %>
+          <video controls="controls" class="video-js vjs-default-skin" style="width:100%" data-setup="{}" controlslist="nodownload" preload="auto">
+            <source src="<%= document._source["hrefs_ssm"][index] %>" type="<%= document._source["mime_types_ssm"][index] %>">
+            Your browser does not support the video tag.
+          </video>
+        <% end %>
       <% end %>
     <% end %>
+
+    <div class=text-center>
+      <div class="btn-group btn-group-lg" role="group" aria-label="...">
+        <% document._source["file_access_ssm"].each_with_index do |access, index| %>
+          <a type="button" class="btn btn-primary" role="button" href="<%= document._source["hrefs_ssm"][index] %>">
+            Download <%= document._source["file_labels_ssm"][index] %>
+          </a>
+        <% end %>
+      </div>
+    </div>
 
   <% end %>
 <% end %>
