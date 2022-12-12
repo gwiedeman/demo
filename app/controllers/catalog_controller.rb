@@ -95,7 +95,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'level_sim', label: 'Level', limit: 10
     config.add_facet_field 'names_ssim', label: 'Names', limit: 10
     config.add_facet_field 'repository_sim', label: 'Repository', limit: 10
-    config.add_facet_field 'type_ssi', label: 'Type', limit: 10
+    config.add_facet_field 'type_ssim', label: 'Type', limit: 10
     config.add_facet_field 'geogname_sim', label: 'Place', limit: 10
     config.add_facet_field 'mime_type_ssi', label: 'File format', limit: 10
     config.add_facet_field 'rights_statement_ssi', label: 'Rights', limit: 10
