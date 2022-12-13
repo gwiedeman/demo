@@ -13,3 +13,24 @@
 .breadcrumb-item.media > .col > div {
   display: inline;
 }
+
+#documents article .document-thumbnail {
+  margin-bottom: 0;
+}
+
+#documents article .document-thumbnail  img {
+  width: 200px;
+}
+
+@media screen and (min-width: 576px) {
+  #documents article {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #documents article .document-thumbnail {
+    float: none;
+    padding-top: 1rem;
+  }
+}

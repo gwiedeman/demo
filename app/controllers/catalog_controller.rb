@@ -42,7 +42,7 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'normalized_title_ssm'
     config.index.display_type_field = 'level_ssm'
-    # config.index.thumbnail_field = 'thumbnail_href_ssm'
+    config.index.thumbnail_field = 'thumbnail_href_ssm'
 
     # solr field configuration for document/show views
     # config.show.title_field = 'title_display'

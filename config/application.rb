@@ -11,7 +11,7 @@ module Demo
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    config.relative_url_root = "/demo"
+    #config.relative_url_root = "/demo"
 
     # Configuration for the application, engines, and railties goes here.
     #
