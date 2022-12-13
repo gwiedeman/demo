@@ -19,7 +19,8 @@
 }
 
 #documents article .document-thumbnail  img {
-  width: 200px;
+  max-width: 200px;
+  max-height: 150px;
 }
 
 @media screen and (min-width: 576px) {
