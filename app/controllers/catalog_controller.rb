@@ -355,6 +355,20 @@ class CatalogController < ApplicationController
     #config.add_component_field 'file_access_ssm', label: 'access', helper_method: :render_html_tags
     #config.add_component_field 'file_originals_ssm', label: 'originals', helper_method: :render_html_tags
 
+    # for NYHeritage example objects
+    config.add_component_field 'collection_ssi', label: 'Collection', helper_method: :render_html_tags
+    config.add_component_field 'unitdate_ssm', label: 'Date', helper_method: :render_html_tags
+    config.add_component_field 'description_ssim', label: 'Description', helper_method: :render_html_tags
+    config.add_component_field 'corpname_ssm', label: 'Corporate Name', helper_method: :render_html_tags
+    config.add_component_field 'language_ssm', label: 'Language', helper_method: :render_html_tags
+    config.add_component_field 'mime_types_ssm', label: 'File type', helper_method: :render_html_tags
+    config.add_component_field 'legacy_identifier_ssim', label: 'Identifier', helper_method: :render_html_tags
+    config.add_component_field 'prefercite_ssm', label: 'Preferred citation', helper_method: :render_html_tags
+    config.add_component_field 'processing_activity_ssim', label: 'Processing notes', helper_method: :render_html_tags
+    config.add_component_field 'date_digitized_ssim', label: 'Date digitized', helper_method: :render_html_tags
+    config.add_component_field 'original_format_ssim', label: 'Original Format', helper_method: :render_html_tags
+    config.add_component_field 'physical_dimensions_ssim', label: 'Physical Dimensions', helper_method: :render_html_tags
+
     # Component Show Page - Indexed Terms Section
     config.add_component_indexed_terms_field 'access_subjects_ssim', label: 'Subjects', link_to_facet: true, separator_options: {
       words_connector: '<br/>',

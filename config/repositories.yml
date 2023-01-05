@@ -1,60 +1,32 @@
-nlm:
-  name: 'National Library of Medicine. History of Medicine Division'
-  description: 'NLM’s History of Medicine Division collects, preserves, makes available, and interprets for diverse audiences one of the world’s richest collections of historical material related to human health and disease.'
-  building: 'Building 38, Room 1E-21'
-  address1: '8600 Rockville Pike'
-  address2: ''
-  city: 'Bethesda'
-  state: 'MD'
-  zip: '20894'
+meg:
+  name: 'M.E. Grenander Department of Special Collections & Archives'
+  description: 'The principal purpose of The M. E. Grenander Department of Special Collections and Archives is to collect, preserve, provide access to, exhibit, and encourage use of the University Libraries unique manuscript and archival materials, the official records of the University, rare books, and printed materials. These materials are acquired by gift or purchase and serve the current and future research interests of faculty, students, and others affiliated with the University as well as other researchers from the region and beyond.'
+  building: 'Science Library'
+  address1: 'SL-356'
+  address2: '1400 Washington Ave'
+  city: 'Albany'
+  state: 'NY'
+  zip: '12222'
   country: 'USA'
-  phone: ''
-  contact_info: 'hmdref@nlm.nih.gov'
-  thumbnail_url: "https://collections.nlm.nih.gov/pageturnerserver/ajaxp?theurl=http://localhost:8080/fedora/get/nlm:nlmuid-101421040-img/THUMB"
-  request_types:
-    google_form:
-      request_url: 'https://docs.google.com/a/stanford.edu/forms/d/e/1FAIpQLSeOamhY_IcFw4sPnz0ddwWWkrPaHbM5wp7JVbOLOL_mIusEyw/viewform'
-      request_mappings: "document_url=entry.1980510262&collection_name=entry.619150170&collection_creator=entry.14428541&eadid=entry.996397105&containers=entry.1125277048&title=entry.862815208"
-sul-spec:
-  name: 'Stanford University Libraries. Special Collections and University Archives'
-  visit_note: 'Special Collections and University Archives materials are stored offsite and must be paged 36 hours in advance.'
-  description: 'The Special Collections and University Archives Department of Stanford University Libraries is committed to acquiring, preserving, and providing access to primary source materials that support the research needs of the Stanford community and beyond. There are three distinct divisions in our department: Manuscripts, Rare Books and University Archives. We welcome all students, scholars and members of the general public to the Field Reading Room. Learn more about using and accessing our collections.'
-  building: 'Green Library'
-  address1: '557 Escondido Mall'
+  phone: '(518) 437-3935'
+  contact_info: ''
+  thumbnail_url: 'https://archives.albany.edu/web/img/700/mpa700.jpg'
+  google_request_url: 'https://archives.albany.edu/web/reference'
+  google_request_mappings: "document_url=link&collection_name=collection&eadid=eadid&containers=containers&title=title"
+  visit_note: "The archives are open to the public and anyone is welcome to visit and view the collections."
+schs:
+  name: 'Schenectady County Historical Society'
+  description: 'Schenectady County Historical Society’s digital collection on New York Heritage features a sample of our holdings. Our full collection includes artifacts, paintings, books pertaining to local history, family histories, diaries, newspapers, yearbooks, maps, photographs, personal and family papers, and much more. The mission of the Schenectady County Historical Society is to share stories, inspire dialogue, and encourage the understanding of the history, people, and cultures of Schenectady County. The Society features interactive exhibits, talks, workshops, concerts, education programs, and community events for all audiences in order to further our mission. Our headquarters is located in Schenectady’s historic Stockade neighborhood and houses both the Schenectady History Museum and the Grems-Doolittle Library. The Historical Society also operates the Mabee Farm Historic Site in Rotterdam Junction. We encourage you to visit the Schenectady County Historical Society to explore how Schenectady County has changed over the years, the impact the Schenectady area has had on national events, as well as the rich and diverse history that Schenectady County has to offer.'
+  building: 'Grems-Doolittle Library'
+  address1: '32 Washington Ave.'
   address2: ''
-  city: 'Stanford'
-  state: 'CA'
-  zip: '94305'
+  city: 'Schenectady'
+  state: 'NY'
+  zip: '12305'
   country: 'USA'
-  phone: '(650) 725-1022'
-  contact_info: 'specialcollections@stanford.edu'
-  thumbnail_url: 'https://library.stanford.edu/sites/default/files/styles/150x150/public/collection/image/Collections-Super-Enlight.jpg'
-  request_types:
-    aeon_web_ead:
-      request_url: 'https://sample.request.com'
-      request_mappings: 'Action=10&Form=31&Value=ead_url'
-umich-bhl:
-  name: 'University of Michigan. Bentley Historical Library'
-  description: 'The Bentley Historical Library collects the materials for and promotes the study of the histories of two great, intertwined institutions, the State of Michigan and the University of Michigan. The Library is open without fee to the public, and we welcome researchers regardless of academic or professional affiliation.'
-  building: ''
-  address1: '1150 Beal Ave'
-  address2: ''
-  city: 'Ann Arbor'
-  state: 'MI'
-  zip: '48109-2113'
-  country: 'USA'
-  phone: ''
-  contact_info: 'bentley.ref@umich.edu'
-  thumbnail_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bhlexterior.jpg/150px-Bhlexterior.jpg'
-  request_types:
-    aeon_external_request_endpoint:
-      request_url: https://example.com/aeon/aeon.dll
-      request_mappings:
-        url_params:
-          Action: 11
-          Type: 200
-        static:
-          SystemId: ArcLight
-          ItemInfo1: manuscript
-        accessor:
-          ItemTitle: collection_name
+  phone: '(518) 374-0263'
+  contact_info: 'Librarian@schenectadyhistorical.org'
+  thumbnail_url: 'https://nyheritage.org/sites/default/files/styles/org_logo_extra/public/content/organization/logos/CDLC031.png?itok=kRRavQD9'
+  google_request_url: 'https://archives.albany.edu/web/reference'
+  google_request_mappings: "document_url=link&collection_name=collection&eadid=eadid&containers=containers&title=title"
+  visit_note: "Please send questions to Librarian@schenectadyhistorical.org"
