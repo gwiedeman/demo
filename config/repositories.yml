@@ -30,3 +30,19 @@ schs:
   google_request_url: 'https://archives.albany.edu/web/reference'
   google_request_mappings: "document_url=link&collection_name=collection&eadid=eadid&containers=containers&title=title"
   visit_note: "Please send questions to Librarian@schenectadyhistorical.org"
+schmuse:
+  name: 'Steinmetz Digital Collection of Schenectady'
+  description: "The Steinmetz Collection of Schenectady tells the story of Dr. Charles Steinmetz, GE's Chief Engineer in the 1890s and early 1900s. miSci, the Museum of Innovation and Science (formerly know as: the Schenectady Museum of & Suits-Bueche Planetarium), Schenectady County Historical Society, and Edison-Steinmetz Center have joined together to create the Steinmetz Collection of Schenectady, virtually uniting collections from three different institutions related to Steinmetz."
+  building: 'MiSci'
+  address1: '15 Nott Terrace Heights'
+  address2: ''
+  city: 'Schenectady'
+  state: 'NY'
+  zip: '12308'
+  country: 'USA'
+  phone: '(518) 382-7890 x241'
+  contact_info: ''
+  thumbnail_url: 'https://nyheritage.org/sites/default/files/styles/org_logo_extra/public/content/organization/logos/CDLC032_0.png?itok=r21M1MRJ'
+  google_request_url: 'https://archives.albany.edu/web/reference'
+  google_request_mappings: "document_url=link&collection_name=collection&eadid=eadid&containers=containers&title=title"
+  visit_note: ""
